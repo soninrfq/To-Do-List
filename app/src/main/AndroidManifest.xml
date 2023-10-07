@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bsi.ac.id.sekolahku">
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/todos"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Tema2">
+        <activity android:name=".detaildata"></activity>
+        <activity android:name=".updatedata" />
+        <activity android:name=".splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Dashboard"
+            android:theme="@style/Tema1" />
+        <activity
+            android:name=".datalist"
+            android:label="To Do List"
+            android:parentActivityName=".datalist"
+            android:theme="@style/Tema1" />
+        <activity
+            android:name=".informasi"
+            android:label="Tentang Aplikasi"
+            android:parentActivityName=".informasi"
+            android:theme="@style/Tema1" />
+        <activity
+            android:name=".inputdata"
+            android:label="Input Data"
+            android:parentActivityName=".inputdata"
+            android:theme="@style/Tema1" />
+    </application>
+</manifest>
