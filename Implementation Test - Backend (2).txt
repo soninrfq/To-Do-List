@@ -1,0 +1,28 @@
+Soni Nurafiq
+
+Implementation Test - Backend (2)
+
+1. SELECT * FROM employees;
+
+2. SELECT COUNT(job_title) FROM employees WHERE job_title="Manager";
+
+3. SELECT name, salary FROM employees WHERE department IN("Sales,Marketing");
+
+4. SELECT AVG(salary) AS gaji FROM employees WHERE joined_date<=2018;
+
+5. SELECT * FROM employees INNER JOIN sales_data ON employees.employee_id = sales_data.employee_id ORDER BY sales DESC LIMIT 5;
+
+6. SELECT name, salary, AVG(salary) as gaji FROM employees WHERE MAX(AVG(salary));
+
+7. SELECT employees.name, sales_data.sales FROM employees INNER JOIN sales_data ON employees.employee_id = sales_data.employee_id ORDER BY sales DESC;
+
+8. 
+DELIMITER //
+CREATE PROCEDURE showKaryawan(department)
+BEGIN
+	SELECT name, salary FROM employees;
+END //
+DELIMITER;
+
+CALL showKaryawan(IT);
+
